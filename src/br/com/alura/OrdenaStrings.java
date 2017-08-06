@@ -18,10 +18,20 @@ public class OrdenaStrings {
 		
 		//Consumer<String> consumidor = new ImprimeNaLinha();
 			
-		Ordena ordena = new Ordena();
-		Collections.sort(palavras, ordena);
+		//Ordena ordena = new Ordena();
+		//Collections.sort(palavras, ordena);
 		
-		palavras.forEach((String s) -> System.out.println(s));
+		//palavras.sort( (s1, s2) -> Integer.compare(s1.length(), s2.length() ));
+		palavras.sort((s1, s2) -> s1.length() - s2.length());
+		
+		//onsumer<String> impressor = s-> System.out.println(s);
+		//palavras.forEach(impressor);
+		
+		// Lambda com consumer embutido
+		//palavras.forEach((String s) -> System.out.println(s));
+		
+		//ou
+		palavras.forEach(s -> System.out.println(s) );
 		
 
 	}
